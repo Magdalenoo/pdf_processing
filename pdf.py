@@ -3,6 +3,7 @@ import sys
 
 
 def combine(*args):
+    # Usage: pdf.py combine filename(s) 
     merger = PyPDF2.PdfFileMerger()
     for pdf in [*args]:
         merger.append(pdf)
@@ -10,6 +11,7 @@ def combine(*args):
 
 
 def watermark(*args):
+    # Usage: pdf.py watermark file2 file3
     # [2] - file to be watermarked
     # [3] - watermark
     file_list = [*args]
@@ -27,6 +29,7 @@ def watermark(*args):
 
 
 def rotate(*args):
+    # Usage: pdf.py rotate filename
     # rb mode - we need to convert file to binary, so reader can read it.
     with open(*args, 'rb') as file:
         reader = PyPDF2.PdfFileReader(file)

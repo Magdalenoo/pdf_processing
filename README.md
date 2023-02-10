@@ -1,2 +1,2 @@
 # pdf_processing
-Python application that processing PDF files
+Python commandline application that processing PDF files
